@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Info</title>
-    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+    background-color: black;
+    color: white;
+}
+
+
+.nav{
+    text-align: center;
+    background-color:aquamarine;
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+.first{
+    font-size: 20px;
+    padding: 5px;
+    line-height: 30px;
+}
+
+.photo{
+    padding: 10px;
+    width: 700px;
+}
+
+    </style>
 </head>
 <body>
     <div class="nav"></div>
-    <script src="script.js"></script>
+    <script>
+       let nav = document.querySelector(".nav")
+
+            nav.innerHTML = "<h1>Personal Infomation</h1>"
+
+            let img = document.createElement("input")
+            img.className = "photo"
+            img.type = "image"
+            img.src = "photo.jpg"
+
+    let content = document.createElement("div")
+        content.className = "first"
+        content.innerHTML = "<p>I’m Peter, a passionate developer turning ideas into reality through clean code and creative solutions. <br> Always learning, Always building.</p>"
+        
+        let details = document.createElement("div")
+        details.classList = "info"
+        details.innerHTML = "<ul> <li>Name : Peter Idiku</li>  <li>Location : Jos</li>  <li>Gender : Male</li>  <li>State of origin : Cross river</li></ul>"
+
+
+
+
+        document.querySelector("body").appendChild(nav)
+        document.querySelector("body").appendChild(img)
+        document.querySelector("body").appendChild(content)
+        document.querySelector("body").appendChild(details)
+        
+
+    </script>
 </body>
 </html>
